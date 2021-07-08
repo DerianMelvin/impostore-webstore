@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  background-color: black;
+}
+
+.container li {
+  padding: 1.3rem;
+  list-style: none;
+}
+
+.container li a {
+  padding: 0.5rem;
+  color: whitesmoke;
+}
