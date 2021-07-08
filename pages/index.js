@@ -1,14 +1,29 @@
 import Head from "next/head";
+import Item from "../components/home/Item";
+import homeStyles from '../styles/Home.module.css';
 
-export default function Home() {
+export default function Home({ products }) {
   return (
     <div>
-      <h1>An Unknown Store Title</h1>
-      <p>This is but a sample sentence with an unknown store description</p>
+      <Head>
+        <title>Some Store | Home</title>
+      </Head>
 
-      {/* Display Item Card */}
+      <div>
+        <h1>Made to fit your style</h1>
+        <p>Explore our wide range of products</p>
+      </div>
 
-      {/* Footer */}
+      <div className={homeStyles.container}>
+        <Item products={products} />
+      </div>
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch("https://fakestoreapi.com/products");
+  const products = await res.json();
+
+  return { props: { products } };
+};
