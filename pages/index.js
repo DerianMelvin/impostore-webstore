@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Item from "../components/home/Item";
-import homeStyles from '../styles/Home.module.css';
+import Header from "../components/home/Header";
+import ItemList from "../components/home/ItemList";
 
 export default function Home({ products }) {
   return (
@@ -9,14 +9,8 @@ export default function Home({ products }) {
         <title>Some Store | Home</title>
       </Head>
 
-      <div>
-        <h1>Made to fit your style</h1>
-        <p>Explore our wide range of products</p>
-      </div>
-
-      <div className={homeStyles.container}>
-        <Item products={products} />
-      </div>
+      <Header />
+      <ItemList products={products} />
     </div>
   );
 }
