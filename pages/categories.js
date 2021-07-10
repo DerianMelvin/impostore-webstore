@@ -1,20 +1,28 @@
 import Head from "next/head";
+import CategoryList from "../components/categories/CategoryList";
 import Header from "../components/home/Header";
 
-const categories = () => {
+const categories = ({ categories }) => {
   return (
     <div>
       <Head>
         <title>Some Store | Categories</title>
       </Head>
 
-      <Header 
+      <Header
         heading="Pick your favourite stuff"
         description="Find what you need in our selection of categories"
       />
-      <h1>Categories</h1>
+      <CategoryList categories={categories} />
     </div>
   );
+};
+
+export const getStaticProps = async () => {
+  const res = await fetch("https://fakestoreapi.com/products/categories");
+  const categories = await res.json();
+
+  return { props: { categories } };
 };
 
 export default categories;
