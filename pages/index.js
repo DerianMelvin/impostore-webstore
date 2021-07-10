@@ -9,7 +9,10 @@ export default function Home({ products }) {
         <title>Some Store | Home</title>
       </Head>
 
-      <Header />
+      <Header
+        heading="Made to fit your style"
+        description="Explore our wide range of products"
+      />
       <ItemList products={products} />
     </div>
   );
