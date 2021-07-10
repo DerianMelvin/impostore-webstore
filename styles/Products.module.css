@@ -1,20 +1,27 @@
 .container {
+  margin-top: -1.5rem;
+  padding: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: white;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  z-index: 10;
 }
 
 .card {
   padding: 1rem;
   margin: 0.5rem;
-  height: 23rem;
+  height: auto;
   width: 45%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border: 1px solid black;
+  border-radius: 1.5rem;
 }
 
 @media (min-width: 550px) {
@@ -30,13 +37,14 @@
 .title {
   margin-top: 1.3rem;
   width: 100%;
+  height: 2.4rem;
   text-align: left;
   font-size: 0.9rem;
-  
+
   /* Adjust text overflow */
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
@@ -48,4 +56,5 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top: 2px solid lightgray;
 }
