@@ -1,10 +1,10 @@
 import styles from "../../styles/Header.module.css";
 
-const Header = () => {
+const Header = ({ heading, description }) => {
   return (
     <header className={styles.container}>
-      <h1>Made to fit your style</h1>
-      <p>Explore our wide range of products</p>
+      <h1>{heading}</h1>
+      <p>{description}</p>
     </header>
   );
 };
