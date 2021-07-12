@@ -1,6 +1,6 @@
 import Head from "next/head";
 import CategoryList from "../components/categories/CategoryList";
-import Header from "../components/home/Header";
+import Header from "../components/Header";
 
 const categories = ({ categories }) => {
   return (

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "../components/home/Header";
+import Header from "../components/Header";
 import ItemList from "../components/home/ItemList";
 
 export default function Home({ products }) {
