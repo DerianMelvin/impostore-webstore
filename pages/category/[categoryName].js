@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from '../../components/Header'
-import ItemList from "../../components/home/ItemList";
+import ProductList from "../../components/home/ProductList";
 
 const categoryName = ({ products }) => {
   // Get current category of products
@@ -16,7 +16,7 @@ const categoryName = ({ products }) => {
         heading={category}
         description={`Select from our wide selection of ${category}`}
       />
-      <ItemList products={products} />
+      <ProductList products={products} />
     </div>
   );
 };

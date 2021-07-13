@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
-import ItemList from "../components/home/ItemList";
+import ProductList from "../components/home/ProductList";
 
 export default function Home({ products }) {
   return (
@@ -13,7 +13,7 @@ export default function Home({ products }) {
         heading="Made to fit your style"
         description="Explore our wide range of products"
       />
-      <ItemList products={products} />
+      <ProductList products={products} />
     </div>
   );
 }
