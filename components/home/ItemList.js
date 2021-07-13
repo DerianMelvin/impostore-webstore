@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../../styles/Products.module.css";
 
-const Item = ({ products }) => {
+const ItemList = ({ products }) => {
   return (
     <div className={styles.container}>
       {products.map((product) => {
@@ -25,4 +25,4 @@ const Item = ({ products }) => {
   );
 };
 
-export default Item;
+export default ItemList;
