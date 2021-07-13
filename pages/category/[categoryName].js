@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Header from '../../components/Header'
-import ProductList from "../../components/home/ProductList";
+import ProductList from "../../components/products/ProductList";
 
 const categoryName = ({ products }) => {
   // Get current category of products
