@@ -1,3 +1,8 @@
+/*
+  ===============================
+    BASE STYLES
+  ===============================
+*/
 .container {
   margin-top: -1.5rem;
   padding: 1rem 0;
@@ -20,12 +25,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
-
-@media (min-width: 550px) {
-  .card {
-    width: 30%;
-  }
+  cursor: pointer;
 }
 
 .icon {
@@ -41,5 +41,41 @@
 
 .title {
   margin-top: 1rem;
+  height: 3.2rem;
   text-align: center;
+}
+
+/*
+  ===============================
+    MEDIUM / TABLET
+  ===============================
+*/
+@media (min-width: 550px) {
+  .card {
+    width: 20%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 85%;
+    align-self: center;
+  }
+}
+
+/*
+  ===============================
+    LARGE / DESKTOP
+  ===============================
+*/
+@media (min-width: 1024px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 60%;
+  }
 }
