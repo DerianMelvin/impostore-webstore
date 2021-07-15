@@ -1,4 +1,6 @@
 import Head from "next/head";
+import styles from "../../styles/Products.module.css";
+import Image from "next/image";
 
 const details = ({ product }) => {
   return (
@@ -7,9 +9,26 @@ const details = ({ product }) => {
         <title>{`Some Store | ${product.title}`}</title>
       </Head>
 
-      <h1>{product.title}</h1>
-      <p>{product.description}</p>
-      <h3>{product.price}</h3>
+      <div className={styles.product}>
+        <div className={styles.image}>
+          <Image
+            src={product.image}
+            alt={product.title}
+            width="470"
+            height="470"
+          />
+        </div>
+
+        <div className={styles.details}>
+          <span>{product.category}</span>
+          <h2>{product.title}</h2>
+          <p>{product.description}</p>
+          <div className={styles.price}>
+            <h4>Price: </h4>
+            <h4>$ {product.price} USD</h4>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
