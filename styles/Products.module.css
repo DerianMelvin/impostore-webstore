@@ -1,3 +1,8 @@
+/*
+  ===============================
+    BASE STYLES
+  ===============================
+*/
 .container {
   margin-top: -1.5rem;
   padding: 1rem 0;
@@ -9,6 +14,15 @@
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
   z-index: 10;
+}
+
+.product {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
 }
 
 .card {
@@ -24,14 +38,53 @@
   border-radius: 1.5rem;
 }
 
-@media (min-width: 550px) {
-  .card {
-    width: 30%;
-  }
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.details span,
+.details h2,
+.details p {
+  margin-top: 0.7rem;
+}
+
+.details span {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  border: 1px solid none;
+  border-radius: 10rem;
+  text-transform: capitalize;
+  background-color: lightgray;
+}
+
+.details h2 {
+  /* Adjust text overflow */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.details p {
+  font-size: 1.2rem;
+}
+
+.details .price {
+  text-transform: none;
+  font-size: 1.4rem;
 }
 
 .image {
-  border: 2px solid blue;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 1.5rem;
 }
 
 .title {
@@ -57,4 +110,74 @@
   align-items: center;
   justify-content: space-between;
   border-top: 2px solid lightgray;
+}
+
+/*
+  ===============================
+    MEDIUM / TABLET
+  ===============================
+*/
+@media (min-width: 550px) {
+  .card {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .product {
+    margin: 2rem 3%;
+    flex-direction: row;
+  }
+
+  .details {
+    padding: 2rem;
+    width: 50%;
+  }
+
+  .image {
+    width: 50%;
+  }
+}
+
+/*
+  ===============================
+    LARGE / DESKTOP
+  ===============================
+*/
+@media (min-width: 1024px) {
+  .product {
+    margin: 2rem 6%;
+  }
+  .details {
+    width: 60%;
+  }
+
+  .details h2 {
+    font-size: 2rem;
+  }
+
+  .details p {
+    font-size: 1.3rem;
+  }
+
+  .details .price {
+    font-size: 1.8rem;
+  }
+
+  .image {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .product {
+    margin: 2rem 9%;
+  }
+  .details {
+    width: 70%;
+  }
+
+  .image {
+    width: 30%;
+  }
 }
