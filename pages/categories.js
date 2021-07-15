@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 const categories = ({ categories }) => {
   return (
-    <div>
+    <>
       <Head>
         <title>Some Store | Categories</title>
       </Head>
@@ -14,7 +14,7 @@ const categories = ({ categories }) => {
         description="Find what you need in our selection of categories"
       />
       <CategoryList categories={categories} />
-    </div>
+    </>
   );
 };
 

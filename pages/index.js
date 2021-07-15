@@ -4,7 +4,7 @@ import ProductList from "../components/products/ProductList";
 
 export default function Home({ products }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Some Store | Home</title>
       </Head>
@@ -14,7 +14,7 @@ export default function Home({ products }) {
         description="Explore our wide range of products"
       />
       <ProductList products={products} />
-    </div>
+    </>
   );
 }
 

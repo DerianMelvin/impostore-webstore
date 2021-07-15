@@ -7,7 +7,7 @@ const categoryName = ({ products }) => {
   const category = products[0].category;
 
   return (
-    <div>
+    <>
       <Head>
         <title>{`Some Store | ${category}`}</title>
       </Head>
@@ -17,7 +17,7 @@ const categoryName = ({ products }) => {
         description={`Select from our wide selection of ${category}`}
       />
       <ProductList products={products} />
-    </div>
+    </>
   );
 };
 

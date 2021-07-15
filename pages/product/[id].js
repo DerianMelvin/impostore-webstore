@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const details = ({ product }) => {
   return (
-    <div>
+    <>
       <Head>
         <title>{`Some Store | ${product.title}`}</title>
       </Head>
@@ -29,7 +29,7 @@ const details = ({ product }) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
