@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import ProductList from "../components/products/ProductList";
+import imgHome from "../public/images/background_home.jpg";
 
 export default function Home({ products }) {
   return (
@@ -12,6 +13,7 @@ export default function Home({ products }) {
       <Header
         heading="Made to fit your style"
         description="Explore our wide range of products"
+        backgroundImage={imgHome}
       />
       <ProductList products={products} />
     </>
