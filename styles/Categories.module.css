@@ -5,9 +5,10 @@
 */
 .container {
   margin-top: -1.5rem;
-  padding: 1rem 0;
+  padding-top: 3rem;
+  min-height: 30rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: white;
