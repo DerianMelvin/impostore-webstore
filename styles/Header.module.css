@@ -1,3 +1,8 @@
+/*
+  ===============================
+    BASE STYLES
+  ===============================
+*/
 .container {
   padding: 1.5rem;
   width: 100%;
@@ -7,15 +12,61 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: whitesmoke;
 }
 
-.container ::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 23rem;
-  width: 100%;
-  background-color: blue;
+.container div {
+  top: 4.2rem !important;
+}
+
+.image {
+  margin: 0 !important;
+  min-height: 22rem !important;
+  max-height: 22rem !important;
   z-index: -1;
+}
+
+.text {
+  padding: 3rem 2rem;
+  width: 100vw;
+  box-shadow: inset 0px 4px 100px 75px rgba(0, 0, 0, 0.8);
+}
+
+.text h1 {
+  text-transform: capitalize;
+}
+
+/*
+  ===============================
+    MEDIUM / TABLET
+  ===============================
+*/
+@media (min-width: 768px) {
+  .image {
+    min-height: 35rem !important;
+    max-height: 35rem !important;
+  }
+
+  .text {
+    padding: 3rem;
+    width: 70%;
+  }
+}
+
+/*
+  ===============================
+    LARGE / DESKTOP
+  ===============================
+*/
+@media (min-width: 1024px) {
+  .image {
+    min-height: 45rem !important;
+    max-height: 45rem !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .text {
+    width: 60%;
+  }
 }
