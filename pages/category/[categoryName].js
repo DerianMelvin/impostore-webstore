@@ -1,10 +1,13 @@
 import Head from "next/head";
-import Header from '../../components/Header'
+import Header from "../../components/Header";
 import ProductList from "../../components/products/ProductList";
 
 const categoryName = ({ products }) => {
   // Get current category of products
   const category = products[0].category;
+
+  // Adjust text for image path
+  const imgPath = category.replace(' ', '_')
 
   return (
     <>
@@ -15,6 +18,7 @@ const categoryName = ({ products }) => {
       <Header
         heading={category}
         description={`Select from our wide selection of ${category}`}
+        backgroundImage={`/images/background_${imgPath}.jpg`}
       />
       <ProductList products={products} />
     </>
