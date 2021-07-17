@@ -27,6 +27,7 @@ const details = ({ product }) => {
             <h4>Price: </h4>
             <h4>$ {product.price} USD</h4>
           </div>
+          <button className={styles.button}>Add to Cart</button>
         </div>
       </div>
     </>
