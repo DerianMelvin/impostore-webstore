@@ -1,3 +1,4 @@
+import Footer from './navigation/Footer';
 import Nav from './navigation/Nav';
 
 const Layout = ({ children }) => {
@@ -7,6 +8,7 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
       </div>
+      <Footer />
     </>
   );
 };
