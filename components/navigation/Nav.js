@@ -22,13 +22,14 @@ const Nav = () => {
 
   return (
     <nav className={styles.container}>
-      <Link href="/">
+      <Link href="/" passHref>
         <Image
           src={logo}
           alt="Impostore logo"
           width="140"
           height="30"
           objectFit="contain"
+          className={styles.logo}
         />
       </Link>
 
