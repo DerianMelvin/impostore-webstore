@@ -8,6 +8,7 @@ export default function Home({ products }) {
     <>
       <Head>
         <title>Some Store | Home</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Header
