@@ -16,6 +16,7 @@ const details = ({ product }) => {
             alt={product.title}
             width="470"
             height="470"
+            priority="true"
           />
         </div>
 
@@ -34,34 +35,50 @@ const details = ({ product }) => {
   );
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch("https://fakestoreapi.com/products");
-  const products = await res.json();
-
-  const ids = products.map((product) => product.id);
-  const paths = ids.map((id) => {
-    return {
-      params: {
-        id: id.toString(),
-      },
-    };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps = async ({ params }) => {
+export const getServerSideProps = async ({ params }) => {
   const res = await fetch(`https://fakestoreapi.com/products/${params.id}`);
   const product = await res.json();
 
+  // Returns 404 page if no data is found
+  if (!product) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
-    props: {
-      product,
-    },
+    props: { product },
   };
 };
+
+// export const getStaticPaths = async () => {
+//   const res = await fetch("https://fakestoreapi.com/products");
+//   const products = await res.json();
+
+//   const ids = products.map((product) => product.id);
+//   const paths = ids.map((id) => {
+//     return {
+//       params: {
+//         id: id.toString(),
+//       },
+//     };
+//   });
+
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
+
+// export const getStaticProps = async ({ params }) => {
+//   const res = await fetch(`https://fakestoreapi.com/products/${params.id}`);
+//   const product = await res.json();
+
+//   return {
+//     props: {
+//       product,
+//     },
+//   };
+// };
 
 export default details;

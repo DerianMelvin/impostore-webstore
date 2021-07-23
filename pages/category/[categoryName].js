@@ -25,35 +25,51 @@ const categoryName = ({ products }) => {
   );
 };
 
-export const getStaticPaths = async () => {
-  const res = await fetch("https://fakestoreapi.com/products/categories");
-  const categories = await res.json();
-
-  const paths = categories.map((category) => {
-    return {
-      params: {
-        categoryName: category,
-      },
-    };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps = async ({ params }) => {
-  const res = await fetch(
-    `https://fakestoreapi.com/products/category/${params.categoryName}`
-  );
+export const getServerSideProps = async ({ params }) => {
+  const res = await fetch(`https://fakestoreapi.com/products/category/${params.categoryName}`);
   const products = await res.json();
 
+  // Returns 404 page if no data is found
+  if (!products) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
-    props: {
-      products,
-    },
+    props: { products },
   };
 };
+
+// export const getStaticPaths = async () => {
+//   const res = await fetch("https://fakestoreapi.com/products/categories");
+//   const categories = await res.json();
+
+//   const paths = categories.map((category) => {
+//     return {
+//       params: {
+//         categoryName: category,
+//       },
+//     };
+//   });
+
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
+
+// export const getStaticProps = async ({ params }) => {
+//   const res = await fetch(
+//     `https://fakestoreapi.com/products/category/${params.categoryName}`
+//   );
+//   const products = await res.json();
+
+//   return {
+//     props: {
+//       products,
+//     },
+//   };
+// };
 
 export default categoryName;
