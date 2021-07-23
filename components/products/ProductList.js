@@ -14,6 +14,7 @@ const ProductList = ({ products }) => {
                 alt={product.title}
                 width="300"
                 height="300"
+                priority="true"
               />
               <h3 className={styles.title}>{product.title}</h3>
               <div className={styles.price}>
