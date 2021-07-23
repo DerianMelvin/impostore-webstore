@@ -29,6 +29,12 @@
 .links li a {
   margin: 0 1rem;
   padding: 0.5rem;
+  cursor: pointer;
+  transition: border-bottom 0.1s ease-out;
+}
+
+.links li a:hover {
+  border-bottom: 2px solid whitesmoke;
 }
 
 .mobileMenu {
@@ -41,9 +47,10 @@
   top: 6rem;
   right: 1rem;
   width: 10rem;
-  height: 10rem;
+  height: 13rem;
   border-radius: 1rem;
-  background-color: darkblue;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
 }
 
 .mobileLinks ul {
@@ -55,11 +62,11 @@
 }
 
 .mobileLinks li {
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   width: 100%;
   list-style: none;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid whitesmoke;
 }
 
 .mobileLinks li a {
